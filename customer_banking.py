@@ -74,10 +74,12 @@ def main():
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
     # ADD YOUR CODE HERE
     print(f"Your CD account earned ${interest_earned:.2f} in interest and your new balance is ${updated_cd_balance:.2f}.")
-    
-def is_float(s):
+
+# Checks whether the entry is a float, isdigit was failing when entering numbers
+# with a decimal place, so I cam up with this simple method    
+def is_float(n):
     try:
-        float(s)
+        float(n)
         return True
     except:
         return False
