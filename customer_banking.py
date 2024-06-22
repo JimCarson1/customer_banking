@@ -75,13 +75,17 @@ def main():
     # ADD YOUR CODE HERE
     print(f"Your CD account earned ${interest_earned:.2f} in interest and your new balance is ${updated_cd_balance:.2f}.")
 
-# Checks whether the entry is a float, isdigit was failing when entering numbers
-# with a decimal place, so I cam up with this simple method    
+"""
+Checks whether the entry is a float because isdigit was failing when 
+entering numbers with a decimal place.  This method tries to convert 
+the user input into a float and returns true if the converson is successful 
+and false is a ValueError occurs.    
+"""
 def is_float(n):
     try:
         float(n)
         return True
-    except:
+    except ValueError:
         return False
             
 if __name__ == "__main__":
