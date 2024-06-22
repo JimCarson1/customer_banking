@@ -10,7 +10,6 @@ def main():
     It displays the interest earned on the savings and CD accounts and updates the balances.
     """
     # Prompt the user to set the savings balance, interest rate, and months for the savings account.
-    # ADD YOUR CODE HERE
     while True:
         savings_balance = input("Enter savings balance: ")
         if is_float(savings_balance):
@@ -39,11 +38,9 @@ def main():
     updated_savings_balance, interest_earned = savings_account.create_savings_account(savings_balance, savings_interest, savings_maturity)
   
     # Print out the interest earned and updated savings account balance with interest earned for the given months.
-    # ADD YOUR CODE HERE
     print(f"Your savings account earned ${interest_earned:.2f} in interest and your new balance is ${updated_savings_balance:.2f}.")
 
     # Prompt the user to set the CD balance, interest rate, and months for the CD account.
-    # ADD YOUR CODE HERE
     while True:
         cd_balance = input("Enter CD balance: ")
         if is_float(cd_balance):
@@ -72,7 +69,6 @@ def main():
     updated_cd_balance, interest_earned = cd_account.create_cd_account(cd_balance, cd_interest, cd_maturity)
 
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
-    # ADD YOUR CODE HERE
     print(f"Your CD account earned ${interest_earned:.2f} in interest and your new balance is ${updated_cd_balance:.2f}.")
 
 """
