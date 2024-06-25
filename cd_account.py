@@ -18,8 +18,10 @@ def create_cd_account(balance, interest_rate, months):
     #  Hint: You need to add the interest as a value, i.e, 0.
     account = Account.Account(float(balance), 0)
     
+
+    # Interest on the balance is calculated as follows: interest = balance * (apr/100 * months/12).
     # Calculate interest earned
-    interest = float(balance) * ((float(interest_rate)/100) * (int(months)/12))
+    interest = float(balance) * (interest_rate/100 * months/12)
     
     # Update the CD account balance by adding the interest earned
     balance += interest
